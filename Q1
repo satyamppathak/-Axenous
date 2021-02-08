@@ -1,0 +1,28 @@
+var temp = "BOOKKEEPER";
+        var occurenceCount = [];
+
+        for (var i = 0; i < temp.length; i++) {
+
+            occurenceCount.push((temp.match(new RegExp(temp.charAt(i), "g")) || []).length + ":" + i);
+
+        }
+        console.log(occurenceCount);
+
+        $.each(occurenceCount, (i) => {
+
+            if (parseInt(occurenceCount[i].split(':')[0]) == 2) {
+                replaceChar(temp, "z", parseInt(occurenceCount[i].split(':')[1]))
+            }
+            if (parseInt(occurenceCount[i].split(':')[0]) > 2) {
+                replaceChar(temp, "x", parseInt(occurenceCount[i].split(':')[1]))
+            }
+
+        });
+        function replaceChar(origString, replaceChar, index) {
+            let firstPart = origString.substr(0, index);
+            let lastPart = origString.substr(index + 1);
+
+            temp = firstPart + replaceChar + lastPart;
+
+        }
+        console.log(temp);
