@@ -9,7 +9,9 @@ var temp = "BOOKKEEPER";
         console.log(occurenceCount);
 
         $.each(occurenceCount, (i) => {
-
+            if (parseInt(occurenceCount[i].split(':')[0]) == 1) {
+                console.log(temp.charAt(parseInt(occurenceCount[i].split(':')[1])) + " has 1 occurance")
+            }
             if (parseInt(occurenceCount[i].split(':')[0]) == 2) {
                 replaceChar(temp, "z", parseInt(occurenceCount[i].split(':')[1]))
             }
