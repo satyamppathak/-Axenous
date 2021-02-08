@@ -48,4 +48,22 @@ function countt($str)
 
 In Jquery 
 
+var quetion = "EduCatiON";
+        var output = "";
+        for (var i = 0; i < quetion.length; i++) {
 
+            if (quetion.charAt(i) === quetion.charAt(i).toLowerCase()) {
+                replaceChar(quetion.charAt(i).toUpperCase())
+            }
+            if (quetion.charAt(i) === quetion.charAt(i).toUpperCase()) {
+                replaceChar(quetion.charAt(i).toLowerCase())
+            }
+
+        }
+        function replaceChar(replaceChar) {
+
+
+            output = output + replaceChar
+            // console.log(quetion);
+        }
+        console.log(output);
