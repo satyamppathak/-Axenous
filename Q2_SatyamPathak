@@ -1,1 +1,51 @@
+IN PHP
+
+<?php 
+$str = "EduCatiON";
+echo "$str";
+echo "<br>";
+countt($str);
+function countt($str)
+{
+	$upper = 0; 
+    $lower = 0; 
+    $special =0;
+    for ($i = 0; $i < strlen($str); $i++) 
+    { 
+        if ($str[$i] >= 'A' &&  
+            $str[$i] <= 'Z') 
+            {
+             
+            $upper++;
+            $str[$i] = strtolower($str[$i]);
+            }
+           
+            
+        else if ($str[$i] >= 'a' &&  
+                 $str[$i] <= 'z') 
+                 {
+            $lower++; 
+            $str[$i] = strtoupper($str[$i]);
+            }
+            
+        
+ 
+    } 
+    
+    echo "Upper case letters: " , $upper ;
+    echo "<br>";
+    echo "Lower case letters : " ,$lower ; 
+    echo "<br>";
+    echo "Converted String","\n";
+    echo "$str";
+    
+} 
+
+
+
+
+?>
+
+In Jquery 
+
 
