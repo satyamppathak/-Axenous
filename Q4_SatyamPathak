@@ -1,1 +1,25 @@
+var WAP = prompt("Please enter a number", "");
+        // var WAP = [42, 147];
+        var divisiorsSum = [];
+        var op = 0;
+        // $.each(WAP, (j) => {
+        //divisiorsSum = [];
+        if (WAP != null && WAP != "" && WAP !== undefined) {
+            console.log("All Divisors of " + WAP);
+            for (var i = 1; i <= parseInt(WAP); i++) {
 
+                if (parseInt(WAP) % i == 0) {
+                    console.log(i + " ");
+                    divisiorsSum.push(i);
+                }
+            }
+
+            $.each(divisiorsSum, (i) => {
+
+                op = parseInt(op) + parseInt(divisiorsSum[i]);
+
+            });
+            console.log("SUM : " + op);
+        } else {
+            alert('Kindely Enter a number')
+        }
